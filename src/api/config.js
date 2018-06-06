@@ -10,7 +10,7 @@ EntitiesConfig.configure({
   schemas,
   records,
   resourceConfig,
-  apiClient: SWApiClient // new ApiClient()
+  apiClient: SWApiClient
 })
 
 export {

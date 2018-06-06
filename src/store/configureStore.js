@@ -1,7 +1,7 @@
 import { applyMiddleware, createStore, compose } from 'redux'
 import { Map } from 'immutable'
 import thunk from 'redux-thunk'
-import rootSaga from './root'
+import rootSaga from './rootSaga'
 
 import { combineReducers } from 'redux-immutable'
 import EntitiesModule from 'redux-capacitor/module'
@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   [EntitiesModule.MODULE_NAME]: EntitiesModule.rootReducer
 })
 
-const initStore = (initialState, sagaMiddleware) => {
+const configureStore = (initialState, sagaMiddleware) => {
   const middleware = [sagaMiddleware, thunk]
 
   const enhancers = []
@@ -30,4 +30,4 @@ const initStore = (initialState, sagaMiddleware) => {
   return store
 }
 
-export default initStore
+export default configureStore

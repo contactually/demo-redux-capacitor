@@ -1,6 +1,6 @@
 # Installation Steps
 
-## Installing Capacitor
+## Installing Redux Capacitor
 
 ```
 yarn add redux-capacitor
